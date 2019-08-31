@@ -31,11 +31,11 @@ class Header extends Component {
                     </div>
 
                     <Link to="/the_team">
-                        <Button color="inherit">The team</Button>
+                        <Button color="inherit">O Time</Button>
                     </Link>
                     
                     <Link to="/the_matches">
-                        <Button color="inherit">Matches</Button>
+                        <Button color="inherit">Partidas</Button>
                     </Link>                        
                 
                 </Toolbar>
