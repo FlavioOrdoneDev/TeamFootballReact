@@ -1,19 +1,37 @@
-// import React from 'react';
+ import React, { Component } from 'react';
+ import { firebaseMatches } from '../../../firebase';
+ import { firebaseLooper, reverseArray } from '../../Ui/misc';
 
-// const MatchesHome = () => {
-//     return (
-//         <div className="home_matches_wrapper">
-//             <div className="container">
-//                 Tag
+ class Blocks extends Component {
 
-//                 Blocks
+    state = {
+        matches: []
+    }
 
-//                 Outro
+    componentDidMount() {
+        firebaseMatches.limitToLast(6).once('value').then((snapshot) => {
+            const matches = firebaseLooper(snapshot);
 
-//             </div>
+            this.setState({
+                matches: reverseArray(matches)
+            })
+        })
+    }
 
-//         </div>
-//     );
-// };
+    showMatches = () => (
+        <div>
+            Matches
+        </div>
+    )
 
-// export default MatchesHome;
+     render() {
+         return (
+            <div className="home_matches">
+                {this.showMatches(this.state.matches)}
+            
+            </div>
+     );
+ }
+}
+
+export default Blocks;
