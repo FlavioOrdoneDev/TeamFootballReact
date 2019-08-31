@@ -22,8 +22,8 @@ class Header extends Component {
                     <div style={{flexGrow: 1}}>
                         <div className="header_logo">
                             <CityLogo
-                                Link={true}
-                                linkTo="/"
+                                link={true}
+                                linkto="/"
                                 width="70px"
                                 height="70px"
                             />

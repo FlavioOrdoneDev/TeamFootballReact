@@ -20,6 +20,8 @@ const MatchesHome = () => {
                     bck="#ffffff"
                     size="22px"
                     color="#0e1731"
+                    link={true}
+                    linkto="/the_team"
                 >
                     Veja mais partidas
                 </Tag>

@@ -15,9 +15,9 @@ export const Tag = (props) => {
         { props.children }
     </div>
 
-    if (props.Link) {
+    if (props.link) {
         return (
-            <Link to={props.LinkTo}>
+            <Link to={props.linkto}>
                 {template}
             </Link>
         )
